@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  webserver-go:
+    container_name: webserver-go
+    hostname: webserver-go
+    build:
+      context: services/webserver
+      dockerfile: Dockerfile
+      target: development
+    environment:
+      - DEVELOPER_NAME=lucas
+    ports:
+      - 8080:8080
+    
